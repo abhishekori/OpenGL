@@ -1,7 +1,7 @@
 #include <GL/glut.h>
 #include "math.h"
 #define DEG2RAD 3.14159/180.0
-
+#include<stdio.h>
 void DrawEllipse(float radiusX, float radiusY,int posx,int posy)
 {
    int i;
@@ -17,12 +17,14 @@ void DrawEllipse(float radiusX, float radiusY,int posx,int posy)
 
    glEnd();
 }
-
+float yLocation = 0.0f;
+float bloby=0,blobx=0;
+int ctr=0,ctr1=0;
 void display(){
   glClear(GL_COLOR_BUFFER_BIT);
 
 glColor3f(1,0.87,0.77);
-
+//glLoadIdentity();
 glPushMatrix();
 glRotatef(-10,0,0,1);
 DrawEllipse(10,50,-0,0); //left leg
@@ -79,10 +81,32 @@ glVertex2f(-5,-30);
 
 glEnd();
 glPopMatrix();
+glPushMatrix();
+glColor3f(1,0,0);
+glTranslatef(blobx,bloby,0);
+DrawEllipse(5,5,10,35);
+glPopMatrix();
 
 glFlush();
-}
 
+//update();
+if(ctr<155)
+{
+
+  bloby+=0.5;
+  ctr++;
+}else{
+  if(ctr1<40)
+  {
+    bloby-=0.7;
+    blobx-=0.5;
+    ctr1++;
+
+  }
+
+}
+yLocation += 0.5f;
+}
 void init(){
   glClearColor(1,1,1,1);
 
@@ -91,11 +115,25 @@ void init(){
   gluOrtho2D(-500,500,-500,500);
 }
 
+
+void reshape (int width, int height) {
+glViewport(0, 0, (GLsizei)width, (GLsizei)height); // Set our viewport to the size of our window
+//glMatrixMode(GL_PROJECTION); // Switch to the projection matrix so that we can manipulate how our scene is viewed
+//glLoadIdentity(); // Reset the projection matrix to the identity matrix so that we don't get any artifacts (cleaning up)
+
+//gluPerspective(60, (GLfloat)width / (GLfloat)height, 1.0, 100.0); // Set the Field oS view angle (in degrees), the aspect ratio of our window, and the new and far planes
+
+//glMatrixMode(GL_MODELVIEW); // Switch back to the model view matrix, so that we can start drawing shapes correctly
+}
+
 int main(int argc,char **argv){
   glutInit(&argc,argv);
   glutInitWindowSize(1000,1000);
   glutCreateWindow("human");
   glutDisplayFunc(display);
+  glutIdleFunc(display); // Tell GLUT to use the method "display" as our idle method as well
+
+//glutReshapeFunc(reshape); // Tell GLUT to use the method "reshape" for reshaping
   init();
   glutMainLoop();
   return 0;
