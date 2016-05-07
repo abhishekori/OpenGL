@@ -8,6 +8,9 @@ void hexagon(int x,int y){
   float rad;
   float hexagon_r=20;
 
+
+
+
   float hexagon_dx=hexagon_r*cos(30.0*M_PI/180.0);
   float hexagon_dy=hexagon_r*sin(30.0*M_PI/180.0);
   float hexagon_gx=2.0*hexagon_dx;
