@@ -60,6 +60,7 @@ void DrawEllipse(float radiusX, float radiusY,int posx,int posy)
 
    glEnd();
 }
+
 float yLocation = 0.0f;
 float bloby=0,blobx=0,cx1=0,cy1=0,cx2=0,cy2=0;
 int c0=0,c1=0,c2=0,c3=0;
