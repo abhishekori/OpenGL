@@ -9,7 +9,8 @@
   - Benign and Melignant tumor
   - Spread of cancer cells across the body through blood vessels
   - Differennt external causes for cancer
-
+ 
+### It was great fun building this project thanks to my project partner <a href="https://github.com/Diksha94"> Diksha </a> :raised_hands:
 
 
 # **Sceen Shots**
@@ -18,15 +19,13 @@
  
  <img src="https://github.com/abhishekori/OpenGL/blob/master/Screenshot_4.png">
  
- ## Scene one
+## Scene one
  <img src="https://github.com/abhishekori/OpenGL/blob/master/Screenshot_5.png">
- 
- ## Scene two
+## Scene two
  <img src="https://github.com/abhishekori/OpenGL/blob/master/Screenshot_6.png" >
- 
- ## Scene three
+## Scene three
  <img src="https://github.com/abhishekori/OpenGL/blob/master/Screenshot_7.png">
  
- ## Scene four
+## Scene four
  <img src="https://github.com/abhishekori/OpenGL/blob/master/Screenshot_8.png" >
- ### It was great fun building this project thanks to my project partner <a href="https://github.com/Diksha94"> Diksha </a> :raised_hands:
+ 
