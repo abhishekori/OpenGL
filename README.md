@@ -1,8 +1,8 @@
 # Causes of cancer and its effects :syringe:
 
 ## This was our Computer graphics mini project in 6th semester :school_satchel:. Built with graphics library OpenGL. 
- --------------------
- contains 4 scenes :movie_camera:
+ 
+ Contains 4 scenes :movie_camera:
  
 
   - Uncontrollable division of cells
